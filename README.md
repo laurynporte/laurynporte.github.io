@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+## Open MCT Coding Exercise Solution
 
-You can use the [editor on GitHub](https://github.com/laurynporte/laurynporte.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+*A realtime telemetry table*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![demo-1](./images/openmct-filter.gif)
 
-### Markdown
+> **Note**: this guide assumes you're using [Node](https://nodejs.org/) <= v14.0.0 and are familiar with [Git](https://git-scm.com/).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Repo](https://github.com/laurynporte/laurynporte.github.io)
 
-```markdown
-Syntax highlighted code block
+### HTML/CSS libraries used
 
-# Header 1
-## Header 2
-### Header 3
+[JQuery @3.5.1](https://jquery.com/)
+[Bootstrap Table @1.18.2](https://bootstrap-table.com/)
+[Bootstrap Styles @4.3.1](https://getbootstrap.com/docs/3.4/css/)
+[Jekyll](https://jekyllrb.com/docs/)(README theme)
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### Setup
 
-**Bold** and _Italic_ and `Code` text
+1. Run the telemetry server 
 
-[Link](url) and ![Image](src)
+Bypass CORS by adding the following to line 19 in `openmct-tutorial/example-server/server.js`
+
+```js
+  app.use(function(req, res, next) { 
+	res.header("Access-Control-Allow-Origin", "*"); // * can be replaced by whatever server url is hosting your app
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); 
+	next(); 
+}); 
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Download the repo & run the server
 
-### Jekyll Themes
+```bash
+	git clone https://github.com/nasa/openmct-tutorial.git 
+	cd openmct-tutorial 
+	npm install 
+	npm start 
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/laurynporte/laurynporte.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+2. Open [solution.html](https://github.com/laurynporte/laurynporte.github.io/blob/main/solution.html) in your browser
 
-### Support or Contact
+ - Defaults to displaying /realtime and /history data by timestamp in desc order 
+ - Table can be sorted by asc or desc timestamp order by clicking column arrows
+ - Point event display & event subscription can be changed by selecting pwr.c" or "pwr.v" from the drop down and clicking the "filter" button
+ - Point event display & event subscription to both point ids can be set by clicking the "clear" button
+ - GET /history and /realtime calls availabe the network tab
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+### Next steps
+
+ - Add unit tests
+ - Refactor UI to use MVC + state management lib 
+ - Include env variables 
+ - Separate app.js into sep service files
+ - Add caching layer
+
+### Contact
+
+Feel free to leave comments or feedback - thanks!
+
+
