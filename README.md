@@ -6,14 +6,14 @@
 
 > **Note**: this guide assumes you're using [Node](https://nodejs.org/) <= v14.0.0 and are familiar with [Git](https://git-scm.com/).
 
-[Repo](https://github.com/laurynporte/laurynporte.github.io)
+[Github Repo](https://github.com/laurynporte/laurynporte.github.io)
 
 ### HTML/CSS libraries used
 
-[JQuery @3.5.1](https://jquery.com/)
-[Bootstrap Table @1.18.2](https://bootstrap-table.com/)
-[Bootstrap Styles @4.3.1](https://getbootstrap.com/docs/3.4/css/)
-[Jekyll](https://jekyllrb.com/docs/)(README theme)
+ - [JQuery @3.5.1](https://jquery.com/)
+ - [Bootstrap Table @1.18.2](https://bootstrap-table.com/)
+ - [Bootstrap Styles @4.3.1](https://getbootstrap.com/docs/3.4/css/)
+ - [Jekyll](https://jekyllrb.com/docs/)(README theme)
 
 
 ### Setup
