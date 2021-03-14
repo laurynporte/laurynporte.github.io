@@ -6,7 +6,7 @@
 
 > **Note**: this guide assumes you're using [Node](https://nodejs.org/) <= v14.0.0 and are familiar with [Git](https://git-scm.com/).
 
-![Repo](https://github.com/laurynporte/laurynporte.github.io)
+[Repo](https://github.com/laurynporte/laurynporte.github.io)
 
 ### HTML/CSS libraries used
 
