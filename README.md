@@ -18,9 +18,13 @@
 
 ### Setup
 
-1. Run the telemetry server 
+1. Download & run the telemetry server 
 
-Bypass CORS by adding the following to line 19 in `openmct-tutorial/example-server/server.js`
+```bash
+	git clone https://github.com/nasa/openmct-tutorial.git 
+```
+
+To bypass CORS by adding the following to line 19 in `openmct-tutorial/example-server/server.js`
 
 ```js
   app.use(function(req, res, next) { 
@@ -30,16 +34,21 @@ Bypass CORS by adding the following to line 19 in `openmct-tutorial/example-serv
 }); 
 ```
 
-Download the repo & run the server
+Install deps & run the server
 
 ```bash
-	git clone https://github.com/nasa/openmct-tutorial.git 
 	cd openmct-tutorial 
 	npm install 
 	npm start 
 ```
 
-2. Open [solution.html](https://github.com/laurynporte/laurynporte.github.io/blob/main/solution.html) in your browser
+2. Download solution repo & open [solution.html](https://github.com/laurynporte/laurynporte.github.io/blob/main/solution.html) in your browser
+
+```bash
+	git clone https://github.com/laurynporte/laurynporte.github.io.git
+	cd laurynporte.github.io
+	open -a "Google Chrome" solution.html
+```
 
  - Defaults to displaying /realtime and /history data by timestamp in desc order 
  - Table can be sorted by asc or desc timestamp order by clicking column arrows
