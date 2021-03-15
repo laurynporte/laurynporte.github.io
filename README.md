@@ -47,12 +47,12 @@ Install deps & run the server
 ```bash
 	git clone https://github.com/laurynporte/laurynporte.github.io.git
 	cd laurynporte.github.io
-	open -a "Google Chrome" solution.html
+	open -a "Google Chrome" solution.html // any browser
 ```
 
  - Defaults to displaying /realtime and /history data by timestamp in desc order 
- - Table can be sorted by asc or desc timestamp order by clicking column arrows
- - Point event display & event subscription can be changed by selecting pwr.c" or "pwr.v" from the drop down and clicking the "filter" button
+ - Table can be sorted by asc or desc timestamp order by clicking column header arrows
+ - Point event display & event subscription can be changed by selecting "pwr.c" or "pwr.v" from the drop down and clicking the "filter" button
  - Point event display & event subscription to both point ids can be set by clicking the "clear" button
  - GET /history and /realtime calls availabe the network tab
 
@@ -61,7 +61,7 @@ Install deps & run the server
 
  - Add unit tests
  - Refactor UI to use MVC + state management lib 
- - Include env variables 
+ - Include env variables & CI
  - Separate app.js into sep service files
  - Add caching layer
 
